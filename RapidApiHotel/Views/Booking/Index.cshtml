@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Default/Index.cshtml";
+}
+
+<div class="container-fluid booking pb-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container">
+        <div class="bg-white shadow" style="padding: 35px;">
+            <div class="row g-2">
+                <div class="col-md-10">
+                    <form method="post" asp-action="HotelList" asp-controller="Booking" id="hotelform">
+                    <div class="row g-2">
+                            <div class="col-md-3">
+                                <input type='text' class="form-control" name="city" id="city" placeholder="Şehir Bilgisi" />
+
+                            </div>
+                        <div class="col-md-3">
+                            <div class="date" data-target-input="nearest">
+                                    <input type="date" class="form-control" name="arrival_date"
+                                       placeholder="Gidiş Tarihi" data-target="#date1" data-toggle="datetimepicker" />
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="date"  data-target-input="nearest">
+                                    <input type="date" class="form-control" name="departure_date" placeholder="Check out" data-target="#date2" data-toggle="datetimepicker" />
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                                <input type="number" class="form-control" name="adults" id="adults" value="1" min="1" max="10" placeholder="Kişi Sayısı">
+
+                        </div>
+                        
+                    </div>
+
+                        
+                    </form>
+                </div>
+                <div class="col-md-2">
+                    <button type="submit" form="hotelform" class="btn btn-primary w-100">Otel Ara</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
